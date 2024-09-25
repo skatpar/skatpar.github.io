@@ -12,74 +12,98 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f7fa;
             color: #333;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
+        /* Header */
         .header {
-            background-color: #00796b;
+            background-color: #0a3d62;
             color: #fff;
-            padding: 40px 0;
+            padding: 50px 0;
             text-align: center;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
+            font-size: 3em;
             margin: 0;
-            font-size: 2.5em;
         }
 
         .header h3 {
-            margin: 10px 0 0;
-            font-weight: 400;
             font-size: 1.5em;
+            font-weight: 400;
         }
 
+        .header p {
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+
+        /* Section Styling */
         .section {
             background-color: #fff;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .section h2 {
-            color: #00796b;
+            color: #0a3d62;
+            font-size: 2.5em;
             margin-bottom: 20px;
-            font-size: 2em;
+            text-align: center;
         }
 
+        /* About Section */
         .section p {
-            line-height: 1.6em;
             font-size: 1.1em;
+            line-height: 1.8;
+            text-align: justify;
         }
 
+        /* Skills, Services, Portfolio */
         .skills, .services, .portfolio {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
         }
 
         .skills .skill, .services .service, .portfolio .portfolio-item {
-            width: 30%;
+            flex: 1;
+            min-width: 280px;
             margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #e3e6ea;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .skills .skill h4, .services .service h4, .portfolio .portfolio-item h4 {
-            font-size: 1.2em;
-            color: #00796b;
+            font-size: 1.3em;
+            color: #0a3d62;
             margin-bottom: 10px;
         }
 
+        .skills .skill:hover, .services .service:hover, .portfolio .portfolio-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Contact Section */
         .contact-section {
-            background-color: #00796b;
+            background-color: #0a3d62;
             color: #fff;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
@@ -93,23 +117,23 @@
             margin-bottom: 20px;
         }
 
-        .contact-section .contact-links a {
-            margin: 0 15px;
+        .contact-links a {
+            margin: 0 10px;
             color: #fff;
             font-size: 1.5em;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
-        .contact-section .contact-links a:hover {
-            color: #004d40;
+        .contact-links a:hover {
+            color: #82ccdd;
         }
 
+        /* Footer */
         footer {
-            background-color: #004d40;
+            background-color: #0a3d62;
             color: #fff;
             text-align: center;
             padding: 20px 0;
-            margin-top: 40px;
         }
 
         footer p {
@@ -133,7 +157,7 @@
     <!-- About Me Section -->
     <div class="container section">
         <h2>About Me</h2>
-        <p>I am a results-oriented Data Scientist with over 5 years of experience in transforming complex datasets into actionable insights. My expertise lies in predictive modeling, data analysis, and machine learning, which I apply to solve business challenges and drive strategic decision-making. I am passionate about leveraging AI and data science to optimize operations and enhance customer experiences.</p>
+        <p>I am a results-oriented Data Scientist with over 5 years of experience in transforming complex datasets into actionable insights...</p>
     </div>
 
     <!-- Services Section -->
@@ -142,15 +166,15 @@
         <div class="services">
             <div class="service">
                 <h4>Data Science Consulting</h4>
-                <p>Providing expert consulting services to help businesses harness the power of data for informed decision-making and strategic growth.</p>
+                <p>Providing expert consulting services to help businesses harness the power of data...</p>
             </div>
             <div class="service">
                 <h4>Machine Learning Solutions</h4>
-                <p>Designing and implementing machine learning models to solve complex business problems and optimize processes.</p>
+                <p>Designing and implementing machine learning models to solve complex business problems...</p>
             </div>
             <div class="service">
                 <h4>AI Strategy Development</h4>
-                <p>Helping organizations develop and execute AI strategies that align with their business objectives and drive innovation.</p>
+                <p>Helping organizations develop and execute AI strategies that align with their business objectives...</p>
             </div>
         </div>
     </div>
@@ -180,15 +204,15 @@
         <div class="portfolio">
             <div class="portfolio-item">
                 <h4>Customer Churn Prediction Model</h4>
-                <p>Developed a churn prediction model for Maya Bank, reducing customer churn by 10% through targeted marketing campaigns.</p>
+                <p>Developed a churn prediction model for Maya Bank...</p>
             </div>
             <div class="portfolio-item">
                 <h4>ATM Cash Optimization</h4>
-                <p>Engineered a cash optimization model for Habib Bank Limited, resulting in a 15% reduction in cash handling costs.</p>
+                <p>Engineered a cash optimization model for Habib Bank Limited...</p>
             </div>
             <div class="portfolio-item">
                 <h4>Credit Risk Scorecard</h4>
-                <p>Led the development of a feature store for Telenor Microfinance Bank, facilitating the launch of a PKR 20 billion loan product.</p>
+                <p>Led the development of a feature store for Telenor Microfinance Bank...</p>
             </div>
         </div>
     </div>
